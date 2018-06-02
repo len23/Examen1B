@@ -21,7 +21,7 @@ import { GrillasComponent } from './grillas/grillas.component';
 import { DetallesProductoComponent } from './detalles-producto/detalles-producto.component';
 import {MenuItem} from 'primeng/api';
 import { CardComponent } from './card/card.component';
-import { TablaComponent } from './tabla/tabla.component';                 //api
+import { Tabla2Component } from './tabla2/tabla2.component';                 //api
 
 
 @NgModule({
@@ -33,7 +33,7 @@ import { TablaComponent } from './tabla/tabla.component';                 //api
     GrillasComponent,
     DetallesProductoComponent,
     CardComponent,
-    TablaComponent
+    Tabla2Component
   ],
   imports: [
     BrowserModule,
