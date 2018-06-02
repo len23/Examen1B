@@ -12,6 +12,7 @@ import { CabeceraTiendaComponent } from './cabecera-tienda/cabecera-tienda.compo
 import { CarrouselComponent } from './carrousel/carrousel.component';
 import { DetallesTiendaComponent } from './detalles-tienda/detalles-tienda.component';
 import { GrillasComponent } from './grillas/grillas.component';
+import { DetallesProductoComponent } from './detalles-producto/detalles-producto.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { GrillasComponent } from './grillas/grillas.component';
     CabeceraTiendaComponent,
     CarrouselComponent,
     DetallesTiendaComponent,
-    GrillasComponent
+    GrillasComponent,
+    DetallesProductoComponent
   ],
   imports: [
     BrowserModule,
