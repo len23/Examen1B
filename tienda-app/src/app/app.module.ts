@@ -17,7 +17,8 @@ import { CarrouselComponent } from './carrousel/carrousel.component';
 import { DetallesTiendaComponent } from './detalles-tienda/detalles-tienda.component';
 import { GrillasComponent } from './grillas/grillas.component';
 import { DetallesProductoComponent } from './detalles-producto/detalles-producto.component';
-import {MenuItem} from 'primeng/api';                 //api
+import {MenuItem} from 'primeng/api';
+import { CardComponent } from './card/card.component';                 //api
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {MenuItem} from 'primeng/api';                 //api
     CarrouselComponent,
     DetallesTiendaComponent,
     GrillasComponent,
-    DetallesProductoComponent
+    DetallesProductoComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
