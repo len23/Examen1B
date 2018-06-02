@@ -8,6 +8,7 @@ import {MatInputModule} from '@angular/material';
 import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import {InputTextModule} from 'primeng/inputtext';
+import {CardModule} from 'primeng/card';
 
 
 
@@ -41,7 +42,8 @@ import { CardComponent } from './card/card.component';                 //api
     MatInputModule,
     AccordionModule,
     FormsModule,
-    InputTextModule
+    InputTextModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
