@@ -9,6 +9,7 @@ import {AccordionModule} from 'primeng/accordion';     //accordion and accordion
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import {InputTextModule} from 'primeng/inputtext';
 import {CardModule} from 'primeng/card';
+import {TableModule} from 'primeng/table';
 
 
 
@@ -45,7 +46,8 @@ import { TablaComponent } from './tabla/tabla.component';                 //api
     AccordionModule,
     FormsModule,
     InputTextModule,
-    CardModule
+    CardModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
