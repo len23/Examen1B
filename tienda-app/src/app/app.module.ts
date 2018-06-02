@@ -11,13 +11,15 @@ import { AppComponent } from './app.component';
 import { CabeceraTiendaComponent } from './cabecera-tienda/cabecera-tienda.component';
 import { CarrouselComponent } from './carrousel/carrousel.component';
 import { DetallesTiendaComponent } from './detalles-tienda/detalles-tienda.component';
+import { GrillasComponent } from './grillas/grillas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabeceraTiendaComponent,
     CarrouselComponent,
-    DetallesTiendaComponent
+    DetallesTiendaComponent,
+    GrillasComponent
   ],
   imports: [
     BrowserModule,
