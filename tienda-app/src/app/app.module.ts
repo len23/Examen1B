@@ -8,6 +8,7 @@ import {MatInputModule} from '@angular/material';
 import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import {InputTextModule} from 'primeng/inputtext';
+import {CardModule} from 'primeng/card';
 
 
 
@@ -17,7 +18,8 @@ import { CarrouselComponent } from './carrousel/carrousel.component';
 import { DetallesTiendaComponent } from './detalles-tienda/detalles-tienda.component';
 import { GrillasComponent } from './grillas/grillas.component';
 import { DetallesProductoComponent } from './detalles-producto/detalles-producto.component';
-import {MenuItem} from 'primeng/api';                 //api
+import {MenuItem} from 'primeng/api';
+import { CardComponent } from './card/card.component';                 //api
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import {MenuItem} from 'primeng/api';                 //api
     CarrouselComponent,
     DetallesTiendaComponent,
     GrillasComponent,
-    DetallesProductoComponent
+    DetallesProductoComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import {MenuItem} from 'primeng/api';                 //api
     MatInputModule,
     AccordionModule,
     FormsModule,
-    InputTextModule
+    InputTextModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
