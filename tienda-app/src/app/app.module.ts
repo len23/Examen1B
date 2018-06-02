@@ -5,6 +5,10 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatInput} from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material';
+import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import {InputTextModule} from 'primeng/inputtext';
+
 
 
 import { AppComponent } from './app.component';
@@ -13,6 +17,8 @@ import { CarrouselComponent } from './carrousel/carrousel.component';
 import { DetallesTiendaComponent } from './detalles-tienda/detalles-tienda.component';
 import { GrillasComponent } from './grillas/grillas.component';
 import { DetallesProductoComponent } from './detalles-producto/detalles-producto.component';
+import {MenuItem} from 'primeng/api';                 //api
+
 
 @NgModule({
   declarations: [
@@ -30,7 +36,10 @@ import { DetallesProductoComponent } from './detalles-producto/detalles-producto
     MatButtonModule,
     MatCheckboxModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    AccordionModule,
+    FormsModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]

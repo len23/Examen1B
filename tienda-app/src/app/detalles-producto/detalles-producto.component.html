@@ -1,3 +1,14 @@
-<p>
-  detalles-producto works!
-</p>
+<h3 class="first">Basic</h3>
+<input id="input" type="text" size="30" pInputText [(ngModel)]="text"> 
+<span id="text">{{text}}</span>
+
+<h3>Float Label</h3>
+<span class="ui-float-label">
+    <input id="float-input" type="text" size="30" pInputText> 
+    <label for="float-input">Username</label>
+</span>
+
+<h3>Disabled</h3>
+<input id="disabled-input" type="text" size="30" pInputText [disabled]="disabled" />
+
+<button id="disabled-btn" label="Toggle" pbutton="" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" (click)="toggleDisabled()"><span class="ui-button-text ui-clickable">Toggle</span></button>
