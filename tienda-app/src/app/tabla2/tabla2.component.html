@@ -1,19 +1,22 @@
 
-<p-table [value]="cars">
+<p-table [value]="productos">
     <ng-template pTemplate="header">
         <tr>
-            <th>Vin</th>
-            <th>Year</th>
-            <th>Brand</th>
-            <th>Color</th>
+            
+            <th>numeroProducto</th>
+            <th>nombre</th>
+            <th>descripcion</th>
+            <th>precio</th>
+             <th> fechaLanzamiento</th>
+              <th>aniosGarantia</th>
+              <th>tiendaId</th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-car>
+    <ng-template pTemplate="body" >
         <tr>
-            <td>{{car.vin}}</td>
-            <td>{{car.year}}</td>
-            <td>{{car.brand}}</td>
-            <td>{{car.color}}</td>
+            <td> {{productos[0].numeroProducto}}</td>
+            <td> {{productos[0].nombre}}</td>
+       
         </tr>
     </ng-template>
 </p-table>
