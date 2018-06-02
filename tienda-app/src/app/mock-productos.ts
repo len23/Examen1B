@@ -8,4 +8,12 @@ export const PRODUCTOS: Producto[] = [
     fechaLanzamientoProducto: '13/04/2018',
     aniosGarantia: 3,
     tiendaId: 1, },
+
+    { numeroProducto:2,
+      nombre:'ArinaPan',
+      descripcion:'Arina para hacer pan',
+      precio: 2.00,
+      fechaLanzamientoProducto: '13/04/2018',
+      aniosGarantia: 3,
+      tiendaId: 1, },
 ];
