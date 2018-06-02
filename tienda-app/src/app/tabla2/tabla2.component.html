@@ -1,0 +1,26 @@
+
+<h1 class="display-4">Detalles</h1>
+<p-table [value]="productos"    >
+    <ng-template pTemplate="header">
+        <tr>
+            <th>numeroProducto</th>
+            <th>nombre</th>
+            <th>descripcion</th>
+            <th>precio</th>
+            <th> fechaLanzamiento</th>
+            <th>aniosGarantia</th>
+            <th>tiendaId</th>
+        </tr>
+    </ng-template>
+    <ng-template  pTemplate="body" let-productos >
+        <tr>
+          <td>{{productos.numeroProducto}}</td>
+          <td>{{productos.nombre}}</td>
+          <td>{{productos.descripcion}}</td>
+          <td>{{productos.precio}}</td>
+          <td>{{productos.fechaLanzamiento}}</td>
+          <td>{{productos.aniosGarantia}}</td>
+          <td>{{productos.tiendaId}}</td>
+        </tr>
+    </ng-template>
+</p-table>

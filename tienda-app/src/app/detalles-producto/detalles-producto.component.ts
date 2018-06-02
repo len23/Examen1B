@@ -8,8 +8,6 @@ import {MenuItem} from 'primeng/api';                 //api
 })
 export class DetallesProductoComponent  {
 
-
-
   text: string;
 
   disabled: boolean = true;

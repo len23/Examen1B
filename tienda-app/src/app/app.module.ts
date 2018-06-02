@@ -9,6 +9,7 @@ import {AccordionModule} from 'primeng/accordion';     //accordion and accordion
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import {InputTextModule} from 'primeng/inputtext';
 import {CardModule} from 'primeng/card';
+import {TableModule} from 'primeng/table';
 
 
 
@@ -19,7 +20,8 @@ import { DetallesTiendaComponent } from './detalles-tienda/detalles-tienda.compo
 import { GrillasComponent } from './grillas/grillas.component';
 import { DetallesProductoComponent } from './detalles-producto/detalles-producto.component';
 import {MenuItem} from 'primeng/api';
-import { CardComponent } from './card/card.component';                 //api
+import { CardComponent } from './card/card.component';
+import { Tabla2Component } from './tabla2/tabla2.component';                 //api
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { CardComponent } from './card/card.component';                 //api
     DetallesTiendaComponent,
     GrillasComponent,
     DetallesProductoComponent,
-    CardComponent
+    CardComponent,
+    Tabla2Component
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { CardComponent } from './card/card.component';                 //api
     AccordionModule,
     FormsModule,
     InputTextModule,
-    CardModule
+    CardModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
