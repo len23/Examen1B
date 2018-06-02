@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatInputModule} from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { CabeceraTiendaComponent } from './cabecera-tienda/cabecera-tienda.component';
@@ -21,7 +22,8 @@ import { DetallesTiendaComponent } from './detalles-tienda/detalles-tienda.compo
     BrowserAnimationsModule,
     NoopAnimationsModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
