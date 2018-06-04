@@ -34,6 +34,11 @@ export class DetallesTiendaComponent implements OnInit {
 
   }
 
+  get diagnostic() 
+  {
+     return JSON.stringify(this.tienda); 
+    }
+
  
  
 }

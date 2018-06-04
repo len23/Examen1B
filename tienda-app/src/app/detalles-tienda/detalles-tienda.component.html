@@ -4,13 +4,14 @@
 
 
     <h1 class="first">Detalle</h1>
-
+    <form  #tiendaForm="ngForm">
+            {{diagnostic}}
     <table style="width: 30%; margin: 20px">
         <tr>
             <td> Nombres: </td>
             <td><mat-form-field>
-                <input matInput placeholder="Nombres" [(ngModel)]="tienda.nombre"  name="nombre"
-                #nombre="ngModel" required>
+                <input matInput placeholder="Nombres" [(ngModel)]="tienda.nombres"  name="nombres"
+                #nombres="ngModel" >
               </mat-form-field> </td>	
         </tr>
 
@@ -19,7 +20,7 @@
         <td>
             <mat-form-field>
                 <input matInput placeholder="Direccion" [(ngModel)]="tienda.direccion"  name="direccion"
-                #direccion="ngModel" required>
+                #direccion="ngModel" >
               </mat-form-field>
         </td>
         </tr>
@@ -29,7 +30,7 @@
             <td>
                 <mat-form-field>
                     <input matInput placeholder="Fecha Apertura" [(ngModel)]="tienda.fechaApertura"  name="fechaApertura"
-                    #fechaApertura="ngModel" required>
+                    #fechaApertura="ngModel" >
                   </mat-form-field>
             </td>
         </tr>
@@ -39,7 +40,7 @@
           <td>
               <mat-form-field>
                   <input matInput placeholder="Ruc" [(ngModel)]="tienda.RUC"  name="RUC"
-                  #RUC="ngModel" required>
+                  #RUC="ngModel" >
                 </mat-form-field>
           </td>
         </tr>
@@ -49,7 +50,7 @@
           <td>
           <mat-form-field>
               <input matInput placeholder="Matriz(booleano)" [(ngModel)]="tienda.matriz"  name="matriz"
-              #matriz="ngModel" required>
+              #matriz="ngModel" >
             </mat-form-field>
           </td>
         </tr>
@@ -60,6 +61,7 @@
             
         </tr>
     </table>
+    </form>
   </div>
   
 
