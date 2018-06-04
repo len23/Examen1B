@@ -1,9 +1,3 @@
-<!-- 
-nombres
-- direccion
-- fechaApertura
-- RUC (entero)
-- matriz (booleano) -->
 
 
 <div class="example-container">
@@ -15,7 +9,8 @@ nombres
         <tr>
             <td> Nombres: </td>
             <td><mat-form-field>
-                <input matInput placeholder="Nombres">
+                <input matInput placeholder="Nombres" [(ngModel)]="tienda.nombre"  name="nombre"
+                #nombre="ngModel">
               </mat-form-field> </td>
         </tr>
 
@@ -23,7 +18,8 @@ nombres
         <td>Direccion:</td>
         <td>
             <mat-form-field>
-                <input matInput placeholder="Direccion">
+                <input matInput placeholder="Direccion" [(ngModel)]="tienda.direccion"  name="direccion"
+                #direccion="ngModel">
               </mat-form-field>
         </td>
         </tr>
@@ -32,7 +28,8 @@ nombres
             <td>Fecha Apertura:</td>
             <td>
                 <mat-form-field>
-                    <input matInput placeholder="Fecha Apertura">
+                    <input matInput placeholder="Fecha Apertura" [(ngModel)]="tienda.fechaApertura"  name="fechaApertura"
+                    #fechaApertura="ngModel">
                   </mat-form-field>
             </td>
         </tr>
@@ -41,7 +38,8 @@ nombres
           <td>RUC:</td>
           <td>
               <mat-form-field>
-                  <input matInput placeholder="Ruc">
+                  <input matInput placeholder="Ruc" [(ngModel)]="tienda.RUC"  name="RUC"
+                  #RUC="ngModel">
                 </mat-form-field>
           </td>
         </tr>
@@ -50,35 +48,18 @@ nombres
           <td>Matriz:</td>
           <td>
           <mat-form-field>
-              <input matInput placeholder="Matriz(booleano)">
+              <input matInput placeholder="Matriz(booleano)" [(ngModel)]="tienda.matriz"  name="matriz"
+              #matriz="ngModel">
             </mat-form-field>
           </td>
         </tr>
         <br/>
         <tr> 
-            <td style="text-align:center"><button mat-raised-button color="primary">Limpiar</button></td>
+            <td style="text-align:center"><button mat-raised-button color="primary" (click)="btnLimpiar(tienda)">Limpiar</button></td>
             <td style="text-align:center"><button mat-raised-button color="primary">Crear</button></td>
             
         </tr>
     </table>
-    
-    
-   <!-- 
-    
-  
-    
-    <mat-form-field>
-      <input matInput placeholder="Ruc(entero)">
-    </mat-form-field>
-  
-    <mat-form-field>
-      <input matInput placeholder="Matriz(booleano)">
-    </mat-form-field> -->
-    <!-- <mat-form-field>
-      <mat-select placeholder="Select">
-        <mat-option value="option">Option</mat-option>
-      </mat-select>
-    </mat-form-field> -->
   </div>
   
 
