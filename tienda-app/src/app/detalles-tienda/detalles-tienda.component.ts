@@ -8,18 +8,20 @@ import {Tienda} from '../tienda';
 })
 export class DetallesTiendaComponent implements OnInit {
 
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
   tienda:Tienda ={nombres: '',
   direccion: '',
   fechaApertura:'',
   RUC: null,
   matriz: null};
 
-  tiendasArray:Tienda[];
+  tiendasArray:Tienda[] = [];
 
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   btnLimpiar(){
     this.tienda = {nombres: '',
@@ -29,8 +31,10 @@ export class DetallesTiendaComponent implements OnInit {
       matriz: null}
   }
 
-  btnGuardar(){
+  btnCrearTienda(){
     
+    this.tiendasArray.push(this.tienda);
+    console.log(this.tiendasArray);
 
   }
 
