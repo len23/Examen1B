@@ -7,7 +7,7 @@ export const PRODUCTOS: Producto[] = [
     precio: 0.23,
     fechaLanzamientoProducto: '13/04/2018',
     aniosGarantia: 3,
-    tiendaId: 1, },
+    tiendaId: 1 },
 
     { numeroProducto:2,
       nombre:'ArinaPan',
@@ -15,5 +15,5 @@ export const PRODUCTOS: Producto[] = [
       precio: 2.00,
       fechaLanzamientoProducto: '13/04/2018',
       aniosGarantia: 3,
-      tiendaId: 1, },
+      tiendaId: 1 },
 ];

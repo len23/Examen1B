@@ -8,7 +8,12 @@ import {Tienda} from '../tienda';
 })
 export class DetallesTiendaComponent implements OnInit {
 
-  tienda:Tienda;
+  tienda:Tienda ={nombres: '',
+  direccion: '',
+  fechaApertura:'',
+  RUC: null,
+  matriz: null};
+
   constructor() { }
 
   ngOnInit() {
@@ -21,5 +26,6 @@ export class DetallesTiendaComponent implements OnInit {
       RUC: null,
       matriz: null}
   }
-
+ 
+ 
 }

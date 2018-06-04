@@ -10,8 +10,8 @@
             <td> Nombres: </td>
             <td><mat-form-field>
                 <input matInput placeholder="Nombres" [(ngModel)]="tienda.nombre"  name="nombre"
-                #nombre="ngModel">
-              </mat-form-field> </td>
+                #nombre="ngModel" required>
+              </mat-form-field> </td>	
         </tr>
 
         <tr>
@@ -19,7 +19,7 @@
         <td>
             <mat-form-field>
                 <input matInput placeholder="Direccion" [(ngModel)]="tienda.direccion"  name="direccion"
-                #direccion="ngModel">
+                #direccion="ngModel" required>
               </mat-form-field>
         </td>
         </tr>
@@ -29,7 +29,7 @@
             <td>
                 <mat-form-field>
                     <input matInput placeholder="Fecha Apertura" [(ngModel)]="tienda.fechaApertura"  name="fechaApertura"
-                    #fechaApertura="ngModel">
+                    #fechaApertura="ngModel" required>
                   </mat-form-field>
             </td>
         </tr>
@@ -39,7 +39,7 @@
           <td>
               <mat-form-field>
                   <input matInput placeholder="Ruc" [(ngModel)]="tienda.RUC"  name="RUC"
-                  #RUC="ngModel">
+                  #RUC="ngModel" required>
                 </mat-form-field>
           </td>
         </tr>
@@ -49,13 +49,13 @@
           <td>
           <mat-form-field>
               <input matInput placeholder="Matriz(booleano)" [(ngModel)]="tienda.matriz"  name="matriz"
-              #matriz="ngModel">
+              #matriz="ngModel" required>
             </mat-form-field>
           </td>
         </tr>
         <br/>
         <tr> 
-            <td style="text-align:center"><button mat-raised-button color="primary" (click)="btnLimpiar(tienda)">Limpiar</button></td>
+            <td style="text-align:center"><button mat-raised-button color="primary" (click)="btnLimpiar()">Limpiar</button></td>
             <td style="text-align:center"><button mat-raised-button color="primary">Crear</button></td>
             
         </tr>
