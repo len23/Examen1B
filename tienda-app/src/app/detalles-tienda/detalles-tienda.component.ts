@@ -14,6 +14,8 @@ export class DetallesTiendaComponent implements OnInit {
   RUC: null,
   matriz: null};
 
+  tiendasArray:Tienda[];
+
   constructor() { }
 
   ngOnInit() {
@@ -26,6 +28,12 @@ export class DetallesTiendaComponent implements OnInit {
       RUC: null,
       matriz: null}
   }
+
+  btnGuardar(){
+    
+
+  }
+
  
  
 }
