@@ -34,5 +34,10 @@ export class DetallesProductoComponent  {
     }
   }
 
+  get diagnostic() 
+  {
+     return JSON.stringify(this.producto); 
+    }
+
 
 }
