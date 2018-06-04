@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Tienda} from '../tienda';
 
 @Component({
   selector: 'app-detalles-tienda',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetallesTiendaComponent implements OnInit {
 
+  tienda:Tienda;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  btnLimpiar(){
+    this.tienda = {nombres: '',
+      direccion: '',
+      fechaApertura:'',
+      RUC: null,
+      matriz: null}
   }
 
 }
