@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';                 //api
+import {Producto} from '../Producto';
+import {PRODUCTOS} from '../mock-productos'
 
 @Component({
   selector: 'app-detalles-producto',
@@ -8,13 +10,35 @@ import {MenuItem} from 'primeng/api';                 //api
 })
 export class DetallesProductoComponent  {
 
-  text: string;
+  producto:Producto= {  numeroProducto:null,
+    nombre:' ',
+    descripcion:' ',
+    precio: null,
+    fechaLanzamientoProducto: ' ',
+    aniosGarantia: null,
+    tiendaId: null};
 
-  disabled: boolean = true;
+  constructor() { }
 
-  toggleDisabled() {
-      this.disabled = !this.disabled;
+  ngOnInit() {
   }
+  btnLimpiarProd(){
+    this.producto = {
+      numeroProducto:null,
+      nombre:' ',
+      descripcion:' ',
+      precio: null,
+      fechaLanzamientoProducto: ' ',
+      aniosGarantia: null,
+      tiendaId: null
+    }
+  }
+
+
+  get diagnostic() 
+  {
+     return JSON.stringify(this.producto); 
+    }
 
 
 }
