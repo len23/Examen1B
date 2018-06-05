@@ -1,32 +1,32 @@
 
 <h1 class="first">Detalle</h1>
-<form  #tiendaForm="ngForm">
-        {{diagnostic}}
+<form  #productoForm="ngForm">
+        <!-- {{diagnostic}} -->
 <table style="width: 30%; margin: 20px">
     <tr>
         <td> Numero Producto: </td>
         <td><input id="input" type="text" size="20"  [(ngModel)]="producto.numeroProducto"  name="numeroProducto"
-            #numeroProducto="ngModel"> </td>
+            #numeroProducto="ngModel" required> </td>
     </tr>
     <tr>
         <td> Nombre:</td>
         <td><input id="input" type="text" size="20"  [(ngModel)]="producto.nombre"  name="nombre"
-            #nombre="ngModel"> </td>
+            #nombre="ngModel" required> </td>
     </tr>
     <tr>
         <td> Descripcion:</td>
         <td><input id="input" type="text" size="20" [(ngModel)]="producto.descripcion"  name="descripcion"
-            #descripcion="ngModel"> </td>
+            #descripcion="ngModel" required> </td>
     </tr>
     <tr>
         <td> Precio:</td>
         <td><input id="input" type="text" size="20" [(ngModel)]="producto.precio"  name="precio"
-            #precio="ngModel"> </td>
+            #precio="ngModel" required> </td>
     </tr>
     <tr>
         <td> Fecha de Lanzamiento:</td>
         <td><input id="input" type="text" size="20" [(ngModel)]="producto.fechaLanzamientoProducto"  name="fechaLanzamientoProducto"
-            #fechaLanzamientoProducto="ngModel"> </td>
+            #fechaLanzamientoProducto="ngModel" required> </td>
     </tr>
     <tr>
         <td> Anios Garantia:</td>
@@ -36,12 +36,12 @@
     <tr>
         <td> tiendaId:</td>
         <td><input id="input" type="text" size="20" [(ngModel)]="producto.tiendaId"  name="tiendaId"
-            #tiendaId="ngModel"> </td>
+            #tiendaId="ngModel" required> </td>
     </tr>
     <br/>
     <tr> 
         <td style="text-align:center"><button id="limpiar-btn" (click)="btnLimpiarProd()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" ><span class="ui-button-text ui-clickable" >Limpiar</span></button> </td>
-        <td style="text-align:center"><button id="crear-btn" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"><span class="ui-button-text ui-clickable">Crear</span></button>
+        <td style="text-align:center"><button id="crear-btn" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" (click)="btnCrearProducto(true)" [disabled]="!productoForm.form.valid"><span class="ui-button-text ui-clickable">Crear</span></button>
         </td>
     </tr>
 </table>

@@ -3,6 +3,8 @@ import {Tienda} from '../tienda';
 import {TIENDAS} from '../mock-tiendas';
 import {GrillasComponent} from '../grillas/grillas.component'
 import { CardComponent } from '../card/card.component';
+import {Producto} from '../Producto';
+import {Tabla2Component} from '../tabla2/tabla2.component';
 
 @Component({
   selector: 'app-detalles-tienda',
@@ -11,14 +13,17 @@ import { CardComponent } from '../card/card.component';
 })
 export class DetallesTiendaComponent implements OnInit {
 
-  @ViewChild('child2') childTwo:GrillasComponent;
-  @ViewChild('child3') childThree:CardComponent;
+  @ViewChild(Tabla2Component) private tablaComponent: Tabla2Component;
+  
+  submitted = false;
 
   tiendas = TIENDAS;
   tiendaSeleccionada:Tienda;
+  productoCreado:Producto;
   constructor() { }
 
   ngOnInit() {
+   
   }
 
   tienda:Tienda ={nombres: '',
@@ -43,10 +48,17 @@ export class DetallesTiendaComponent implements OnInit {
     RUC: null,
     matriz: null};
     
+    
   }
 
   onSelected(tienda:Tienda){
     this.tiendaSeleccionada = tienda;
+  }
+
+  onProductoCreado(producto:Producto){
+    console.log(producto);
+   this.tablaComponent.aumentarProductos(producto); 
+   /* this.productoCreado=producto; */
   }
 
   get diagnostic() 

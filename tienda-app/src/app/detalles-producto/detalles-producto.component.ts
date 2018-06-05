@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 import {MenuItem} from 'primeng/api';                 //api
 import {Producto} from '../Producto';
 import {PRODUCTOS} from '../mock-productos'
@@ -9,6 +9,9 @@ import {PRODUCTOS} from '../mock-productos'
   styleUrls: ['./detalles-producto.component.css']
 })
 export class DetallesProductoComponent  {
+
+  @Output() creado = new EventEmitter<Producto>();
+  submitted = false;
 
   producto:Producto= {  numeroProducto:null,
     nombre:' ',
@@ -32,6 +35,19 @@ export class DetallesProductoComponent  {
       aniosGarantia: null,
       tiendaId: null
     }
+  }
+
+  btnCrearProducto(creado:boolean){
+   this.creado.emit(this.producto);
+   this.producto= {
+    numeroProducto:null,
+    nombre:' ',
+    descripcion:' ',
+    precio: null,
+    fechaLanzamientoProducto: ' ',
+    aniosGarantia: null,
+    tiendaId: null
+  }
   }
 
 

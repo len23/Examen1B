@@ -14,13 +14,13 @@
 
             <h1 class="first">Detalle</h1>
             <form #tiendaForm="ngForm">
-                {{diagnostic}}
+                <!-- {{diagnostic}} -->
                 <table style="width: 30%; margin: 20px">
                     <tr>
                         <td> Nombres: </td>
                         <td>
                             <mat-form-field>
-                                <input matInput placeholder="Nombres" [(ngModel)]="tienda.nombres" name="nombres" #nombres="ngModel">
+                                <input matInput placeholder="Nombres" [(ngModel)]="tienda.nombres" name="nombres" #nombres="ngModel" required>
                             </mat-form-field>
                         </td>
                     </tr>
@@ -29,7 +29,7 @@
                         <td>Direccion:</td>
                         <td>
                             <mat-form-field>
-                                <input matInput placeholder="Direccion" [(ngModel)]="tienda.direccion" name="direccion" #direccion="ngModel">
+                                <input matInput placeholder="Direccion" [(ngModel)]="tienda.direccion" name="direccion" #direccion="ngModel"required>
                             </mat-form-field>
                         </td>
                     </tr>
@@ -38,7 +38,7 @@
                         <td>Fecha Apertura:</td>
                         <td>
                             <mat-form-field>
-                                <input matInput placeholder="Fecha Apertura" [(ngModel)]="tienda.fechaApertura" name="fechaApertura" #fechaApertura="ngModel">
+                                <input matInput placeholder="Fecha Apertura" [(ngModel)]="tienda.fechaApertura" name="fechaApertura" #fechaApertura="ngModel" required>
                             </mat-form-field>
                         </td>
                     </tr>
@@ -47,7 +47,7 @@
                         <td>RUC:</td>
                         <td>
                             <mat-form-field>
-                                <input matInput placeholder="Ruc" [(ngModel)]="tienda.RUC" name="RUC" #RUC="ngModel">
+                                <input matInput placeholder="Ruc" [(ngModel)]="tienda.RUC" name="RUC" #RUC="ngModel" required>
                             </mat-form-field>
                         </td>
                     </tr>
@@ -56,7 +56,7 @@
                         <td>Matriz:</td>
                         <td>
                             <mat-form-field>
-                                <input matInput placeholder="Matriz(booleano)" [(ngModel)]="tienda.matriz" name="matriz" #matriz="ngModel">
+                                <input matInput placeholder="Matriz(booleano)" [(ngModel)]="tienda.matriz" name="matriz" #matriz="ngModel" required>
                             </mat-form-field>
                         </td>
                     </tr>
@@ -66,7 +66,7 @@
                             <button mat-raised-button color="primary" (click)="btnLimpiar()">Limpiar</button>
                         </td>
                         <td style="text-align:center">
-                            <button mat-raised-button color="primary" (click)="btnCrearTienda(); ">Crear</button>
+                            <button mat-raised-button color="primary"  [disabled]="!tiendaForm.form.valid" (click)="btnCrearTienda(); ">Crear</button>
                         </td>
                     </tr>
                 </table>
@@ -91,11 +91,18 @@
 
 <div class="row my-3">
         <div class="col-lg-6">
-            <app-detalles-producto></app-detalles-producto> 
+            <app-detalles-producto (creado)="onProductoCreado($event)"></app-detalles-producto> 
+        <!-- <app-detalles-producto></app-detalles-producto> -->
         </div>
         <!-- /.col-lg-8 -->
         <div class="col-lg-6">
             <app-card [tienda]="tiendaSeleccionada"></app-card>
         </div>
         <!-- /.col-md-4 -->
+</div>
+<div>
+       <!--  <app-tabla2 [producto]="productoCreado" ></app-tabla2> -->
+
+ <app-tabla2></app-tabla2>
+
 </div>

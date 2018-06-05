@@ -1,9 +1,9 @@
 <p-card  *ngIf="tienda" title={{tienda.nombres}} [style]="{width: '360px'}">
     <div>
-        <p>{{tienda.direccion}}</p>
-        <p>{{tienda.fechaApertura}}</p>
-        <p>{{tienda.RUC}}</p>
-        <p>{{tienda.matriz}}</p>        
+        <p><label style="color:blue;font-weight:bold">Direccion:</label> {{tienda.direccion}}</p>
+        <p><label style="color:blue;font-weight:bold">Fecha:</label> {{tienda.fechaApertura}}</p>
+        <p><label style="color:blue;font-weight:bold">Ruc:</label> {{tienda.RUC}}</p>
+        <p><label style="color:blue;font-weight:bold">Matriz:</label> {{tienda.matriz}}</p>        
     </div>
 </p-card>
 
