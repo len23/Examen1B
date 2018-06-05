@@ -1,6 +1,6 @@
 import {Tienda} from './tienda';
 
-export const TIENDAS: Tienda[]=[
+ export const TIENDAS: Tienda[]=[
     {
         nombres:'Supermaxi',
         direccion: 'CCI',

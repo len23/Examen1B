@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { Producto } from '../Producto';
 import { PRODUCTOS } from '../mock-productos';
 
@@ -8,10 +8,16 @@ import { PRODUCTOS } from '../mock-productos';
   styleUrls: ['./tabla2.component.css']
 })
 export class Tabla2Component implements OnInit {
+  @Input() producto:Producto;
   productos = PRODUCTOS;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  aumentarProductos(producto:Producto){
+    this.productos.push(producto);
+    console.log(this.productos)
   }
 
 }

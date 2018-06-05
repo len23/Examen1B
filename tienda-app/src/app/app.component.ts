@@ -8,7 +8,6 @@ import { Component,Input } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-/*   @Input() tienda: Tienda;
- */  title = 'app';
+title = 'app';
 
 }
