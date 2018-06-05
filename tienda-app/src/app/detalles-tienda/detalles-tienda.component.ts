@@ -22,7 +22,6 @@ export class DetallesTiendaComponent implements OnInit {
   RUC: null,
   matriz: null};
 
-  tiendasArray:Tienda[] = [];
 
    selectedTienda:Tienda = null;
    selectedTiendaArray:Tienda = null;
@@ -36,9 +35,13 @@ export class DetallesTiendaComponent implements OnInit {
 
   btnCrearTienda(){
     
-    this.tiendasArray.push(this.tienda);
     this.selectedTienda=this.tienda;
-    
+    this.tiendas.push(this.tienda);
+    this.tienda={nombres: '',
+    direccion: '',
+    fechaApertura:'',
+    RUC: null,
+    matriz: null};
     
   }
 
