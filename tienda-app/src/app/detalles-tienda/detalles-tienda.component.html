@@ -1,75 +1,90 @@
 
+    
+    <div class="row my-3">
+        <div class="col-lg-6">
+            <app-carrousel></app-carrousel>
+        </div>
+        <!-- /.col-lg-8 -->
+        <!-- <div class="col-lg-6">
+            <app-detalles-tienda></app-detalles-tienda>
+        </div> -->
+        <!-- <app-detalles-tienda></app-detalles-tienda> -->
+        <div class="col-lg-6">
+ 
 
-<div class="example-container">
+            <h1 class="first">Detalle</h1>
+            <form #tiendaForm="ngForm">
+                {{diagnostic}}
+                <table style="width: 30%; margin: 20px">
+                    <tr>
+                        <td> Nombres: </td>
+                        <td>
+                            <mat-form-field>
+                                <input matInput placeholder="Nombres" [(ngModel)]="tienda.nombres" name="nombres" #nombres="ngModel">
+                            </mat-form-field>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>Direccion:</td>
+                        <td>
+                            <mat-form-field>
+                                <input matInput placeholder="Direccion" [(ngModel)]="tienda.direccion" name="direccion" #direccion="ngModel">
+                            </mat-form-field>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>Fecha Apertura:</td>
+                        <td>
+                            <mat-form-field>
+                                <input matInput placeholder="Fecha Apertura" [(ngModel)]="tienda.fechaApertura" name="fechaApertura" #fechaApertura="ngModel">
+                            </mat-form-field>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>RUC:</td>
+                        <td>
+                            <mat-form-field>
+                                <input matInput placeholder="Ruc" [(ngModel)]="tienda.RUC" name="RUC" #RUC="ngModel">
+                            </mat-form-field>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>Matriz:</td>
+                        <td>
+                            <mat-form-field>
+                                <input matInput placeholder="Matriz(booleano)" [(ngModel)]="tienda.matriz" name="matriz" #matriz="ngModel">
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <br/>
+                    <tr>
+                        <td style="text-align:center">
+                            <button mat-raised-button color="primary" (click)="btnLimpiar()">Limpiar</button>
+                        </td>
+                        <td style="text-align:center">
+                            <button mat-raised-button color="primary" (click)="btnCrearTienda(); ">Crear</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        
+        </div> 
+        <!-- /.col-md-4 -->
+    </div>
 
+<!--     <app-grillas [tienda]="selectedTienda"></app-grillas> -->
+<div class="card text-white bg-secondary my-4 text-center">
+    <div class="card-body">
+        <p class="text-white m-0">Tiendas Ingresadas</p>
+    </div>
+</div>
 
-    <h1 class="first">Detalle</h1>
-    <form  #tiendaForm="ngForm">
-            {{diagnostic}}
-    <table style="width: 30%; margin: 20px">
-        <tr>
-            <td> Nombres: </td>
-            <td><mat-form-field>
-                <input matInput placeholder="Nombres" [(ngModel)]="tienda.nombres"  name="nombres"
-                #nombres="ngModel" >
-              </mat-form-field> </td>	
-        </tr>
-
-        <tr>
-        <td>Direccion:</td>
-        <td>
-            <mat-form-field>
-                <input matInput placeholder="Direccion" [(ngModel)]="tienda.direccion"  name="direccion"
-                #direccion="ngModel" >
-              </mat-form-field>
-        </td>
-        </tr>
-
-        <tr>
-            <td>Fecha Apertura:</td>
-            <td>
-                <mat-form-field>
-                    <input matInput placeholder="Fecha Apertura" [(ngModel)]="tienda.fechaApertura"  name="fechaApertura"
-                    #fechaApertura="ngModel" >
-                  </mat-form-field>
-            </td>
-        </tr>
-
-        <tr>
-          <td>RUC:</td>
-          <td>
-              <mat-form-field>
-                  <input matInput placeholder="Ruc" [(ngModel)]="tienda.RUC"  name="RUC"
-                  #RUC="ngModel" >
-                </mat-form-field>
-          </td>
-        </tr>
-
-        <tr>
-          <td>Matriz:</td>
-          <td>
-          <mat-form-field>
-              <input matInput placeholder="Matriz(booleano)" [(ngModel)]="tienda.matriz"  name="matriz"
-              #matriz="ngModel" >
-            </mat-form-field>
-          </td>
-        </tr>
-        <br/>
-        <tr> 
-            <td style="text-align:center"><button mat-raised-button color="primary" (click)="btnLimpiar()">Limpiar</button></td>
-            <td style="text-align:center"><button mat-raised-button color="primary" (click)="btnCrearTienda()">Crear</button></td>
-            
-        </tr>
-    </table>
-    </form>
-  </div>
-  
-  <app-grillas [tienda]="selectedTienda"></app-hero-detail>
-
-
-
-
-
-
-<!--<button mat-raised-button color="primary">Limpiar</button>
-<button mat-raised-button color="primary">Crear</button> -->
+<div class="row">
+    
+        <app-grillas *ngFor="let tienda of tiendas" [tienda]="tienda"></app-grillas>
+    
+</div>

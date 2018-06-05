@@ -8,7 +8,9 @@ import {Tienda} from '../tienda';
 export class GrillasComponent implements OnInit {
   @Input() tienda: Tienda;
 
-  constructor() { }
+  constructor() {
+  
+   }
 
   ngOnInit() {
   }

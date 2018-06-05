@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Tienda} from '../tienda';
+import {TIENDAS} from '../mock-tiendas'
 
 @Component({
   selector: 'app-detalles-tienda',
@@ -9,6 +10,7 @@ import {Tienda} from '../tienda';
 export class DetallesTiendaComponent implements OnInit {
 
 
+  tiendas = TIENDAS;
   constructor() { }
 
   ngOnInit() {
@@ -22,7 +24,8 @@ export class DetallesTiendaComponent implements OnInit {
 
   tiendasArray:Tienda[] = [];
 
-
+   selectedTienda:Tienda = null;
+   selectedTiendaArray:Tienda = null;
   btnLimpiar(){
     this.tienda = {nombres: '',
       direccion: '',
@@ -34,14 +37,20 @@ export class DetallesTiendaComponent implements OnInit {
   btnCrearTienda(){
     
     this.tiendasArray.push(this.tienda);
-    console.log(this.tiendasArray);
-
+    this.selectedTienda=this.tienda;
+    
+    
   }
 
   get diagnostic() 
   {
      return JSON.stringify(this.tienda); 
     }
+
+    
+  onSelect(tienda: Tienda): void {
+    this.selectedTienda = tienda;
+  }
 
  
  
