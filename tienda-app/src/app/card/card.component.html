@@ -1,6 +1,10 @@
-<p-card title="Simple Card" [style]="{width: '360px'}">
-    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
+<p-card  *ngIf="tienda" title={{tienda.nombres}} [style]="{width: '360px'}">
+    <div>
+        <p>{{tienda.direccion}}</p>
+        <p>{{tienda.fechaApertura}}</p>
+        <p>{{tienda.RUC}}</p>
+        <p>{{tienda.matriz}}</p>        
+    </div>
 </p-card>
 
 

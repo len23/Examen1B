@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import {Tienda} from '../tienda';
-import {TIENDAS} from '../mock-tiendas'
+import {TIENDAS} from '../mock-tiendas';
+import {GrillasComponent} from '../grillas/grillas.component'
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-detalles-tienda',
@@ -9,8 +11,11 @@ import {TIENDAS} from '../mock-tiendas'
 })
 export class DetallesTiendaComponent implements OnInit {
 
+  @ViewChild('child2') childTwo:GrillasComponent;
+  @ViewChild('child3') childThree:CardComponent;
 
   tiendas = TIENDAS;
+  tiendaSeleccionada:Tienda;
   constructor() { }
 
   ngOnInit() {
@@ -22,9 +27,6 @@ export class DetallesTiendaComponent implements OnInit {
   RUC: null,
   matriz: null};
 
-
-   selectedTienda:Tienda = null;
-   selectedTiendaArray:Tienda = null;
   btnLimpiar(){
     this.tienda = {nombres: '',
       direccion: '',
@@ -34,8 +36,6 @@ export class DetallesTiendaComponent implements OnInit {
   }
 
   btnCrearTienda(){
-    
-    this.selectedTienda=this.tienda;
     this.tiendas.push(this.tienda);
     this.tienda={nombres: '',
     direccion: '',
@@ -45,15 +45,15 @@ export class DetallesTiendaComponent implements OnInit {
     
   }
 
+  onSelected(seleccion:boolean){
+    this.tiendaSeleccionada = this.tiendas[0];
+  }
+
   get diagnostic() 
   {
      return JSON.stringify(this.tienda); 
     }
 
-    
-  onSelect(tienda: Tienda): void {
-    this.selectedTienda = tienda;
-  }
 
  
  

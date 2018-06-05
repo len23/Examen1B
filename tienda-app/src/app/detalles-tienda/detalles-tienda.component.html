@@ -85,6 +85,17 @@
 
 <div class="row">
     
-        <app-grillas *ngFor="let tienda of tiendas" [tienda]="tienda"></app-grillas>
+        <app-grillas *ngFor="let tienda of tiendas" [tienda]="tienda"  (seleccionado)="onSelected($event)"></app-grillas>
     
+</div>
+
+<div class="row my-3">
+        <div class="col-lg-6">
+            <app-detalles-producto></app-detalles-producto> 
+        </div>
+        <!-- /.col-lg-8 -->
+        <div class="col-lg-6">
+            <app-card [tienda]="tiendaSeleccionada"></app-card>
+        </div>
+        <!-- /.col-md-4 -->
 </div>
