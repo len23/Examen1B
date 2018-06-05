@@ -45,8 +45,8 @@ export class DetallesTiendaComponent implements OnInit {
     
   }
 
-  onSelected(seleccion:boolean){
-    this.tiendaSeleccionada = this.tiendas[0];
+  onSelected(tienda:Tienda){
+    this.tiendaSeleccionada = tienda;
   }
 
   get diagnostic() 

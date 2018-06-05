@@ -9,7 +9,7 @@ import {TIENDAS} from '../mock-tiendas';
 })
 export class GrillasComponent implements OnInit {
   @Input() tienda: Tienda;
-  @Output() seleccionado= new EventEmitter<boolean>();
+  @Output() seleccionado= new EventEmitter<Tienda>();
 
   constructor() {
   
@@ -19,7 +19,7 @@ export class GrillasComponent implements OnInit {
   }
 
   btnMore(seleccion:boolean){
-    this.seleccionado.emit(seleccion);
+    this.seleccionado.emit(this.tienda);
   }
 
 }
