@@ -1,6 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { Producto } from '../Producto';
 import { PRODUCTOS } from '../mock-productos';
+import {Tienda} from '../tienda';
 
 @Component({
   selector: 'app-tabla2',
@@ -8,6 +9,7 @@ import { PRODUCTOS } from '../mock-productos';
   styleUrls: ['./tabla2.component.css']
 })
 export class Tabla2Component implements OnInit {
+  @Input() tienda:Tienda;
   @Input() producto:Producto;
   productos = PRODUCTOS;
   constructor() { }
@@ -19,5 +21,7 @@ export class Tabla2Component implements OnInit {
     this.productos.push(producto);
     console.log(this.productos)
   }
+
+  
 
 }

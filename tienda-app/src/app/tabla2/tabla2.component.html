@@ -12,8 +12,8 @@
             <th>tiendaId</th>
         </tr>
     </ng-template>
-    <ng-template  pTemplate="body" let-productos >
-        <tr>
+    <ng-template  pTemplate="body" let-productos  >
+        <tr *ngIf="tienda.tiendaId == productos.tiendaId">
           <td>{{productos.numeroProducto}}</td>
           <td>{{productos.nombre}}</td>
           <td>{{productos.descripcion}}</td>

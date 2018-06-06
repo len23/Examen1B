@@ -19,7 +19,9 @@ export class DetallesTiendaComponent implements OnInit {
 
   tiendas = TIENDAS;
   tiendaSeleccionada:Tienda;
+  tiendaCreada:Tienda;
   productoCreado:Producto;
+  contador:number;
   constructor() { }
 
   ngOnInit() {
@@ -30,23 +32,28 @@ export class DetallesTiendaComponent implements OnInit {
   direccion: '',
   fechaApertura:'',
   RUC: null,
-  matriz: null};
+  matriz: null,
+tiendaId: null};
 
   btnLimpiar(){
     this.tienda = {nombres: '',
       direccion: '',
       fechaApertura:'',
       RUC: null,
-      matriz: null}
+      matriz: null,
+    tiendaId:null}
   }
 
   btnCrearTienda(){
+    this.tienda.tiendaId = this.tiendas.length +1;
+    this.tiendaCreada=this.tienda;
     this.tiendas.push(this.tienda);
     this.tienda={nombres: '',
     direccion: '',
     fechaApertura:'',
     RUC: null,
-    matriz: null};
+    matriz: null,
+  tiendaId:null};
     
     
   }

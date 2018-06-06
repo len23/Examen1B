@@ -4,4 +4,5 @@ export class Tienda {
     fechaApertura: string;
     RUC: number;
     matriz: boolean;
+    tiendaId: number;
 }

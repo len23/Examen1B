@@ -35,8 +35,8 @@
     </tr>
     <tr>
         <td> tiendaId:</td>
-        <td><input id="input" type="text" size="20" [(ngModel)]="producto.tiendaId"  name="tiendaId"
-            #tiendaId="ngModel" required> </td>
+        <td><input id="input" type="text" size="20"  name="tiendaId"
+            #tiendaId="ngModel"  *ngIf="tienda"  [(ngModel)]="producto.tiendaId" required readonly> </td>
     </tr>
     <br/>
     <tr> 
